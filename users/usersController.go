@@ -13,7 +13,7 @@ var (
 	un   UserName
 )
 
-func GetUsers(w http.ResponseWriter, r *http.Request) {
+func GetUsers(w http.ResponseWriter, _ *http.Request) {
 	users, _ := getUsers()
 
 	jsonData, _ := json.Marshal(&users)
@@ -52,13 +52,12 @@ func RemoveUser(w http.ResponseWriter, r *http.Request) {
 
 	cpfUser := c.(*UserCpf)
 
-	s, e := DeleteUser(*cpfUser)
+	_, e := DeleteUser(*cpfUser)
 	if e != nil {
 		http.Error(w, "failed to delete user", http.StatusInternalServerError)
 	}
 
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(s))
 }
 
 func UpdateUser(w http.ResponseWriter, r *http.Request) {
