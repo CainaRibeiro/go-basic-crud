@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="mydatabase@mongo" uuid="5bf0f133-e173-4b45-ba51-3863341fc0fb">
+    <data-source source="LOCAL" name="basic-crud" uuid="f495c0eb-d1d7-43ed-a8db-561cf67f9c88">
       <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb://mongo:27017/mydatabase</jdbc-url>
+      <jdbc-url>mongodb+srv://basic-crud.rgb4fg7.mongodb.net/?w=majority&amp;appName=basic-crud</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

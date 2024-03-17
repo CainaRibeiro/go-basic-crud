@@ -1,18 +1,14 @@
 package main
 
 import (
-	"basic-mongo-crud/users"
-	"github.com/gorilla/mux"
-	"net/http"
+	"basic-mongo-crud/db"
+	"basic-mongo-crud/server"
+	"fmt"
 )
 
 func main() {
-	r := mux.NewRouter()
-
-	users.UserRouter(r)
-
-	err := http.ListenAndServe("localhost:5000", r)
-	if err != nil {
-		panic(err)
-	}
+	fmt.Println("Initializing server")
+	server.StartServer()
+	fmt.Println("Server running in port 8081")
+	db.Connect()
 }
